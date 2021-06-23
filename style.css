@@ -1,31 +1,96 @@
 body{
     margin: 0;
     overflow: hidden;
+    font-size: 40;
+}
+
+*{
+    box-sizing: border-box;
 }
 
 .container{
     height: 100vh;
-    border: 2px solid red;
 }
 
 .title-bar{
     height: 5vh;
+    background-color: #107c41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.menu-item{
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    font-size: 18;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item.selected{
+    background-color: #fff;
+    color: #107c41;
+}
+
+.menu-item:hover{
+    background-color: #0c5e31;
+    cursor: pointer;
+}
+
+.menu-item.selected:hover{
+    background-color: #fff;
+    cursor: default;
 }
 
 .menu-bar{
     height: 5vh;
+    background-color: #107c41;
+    display: flex;
+    
 }
 
 .menu-icon-bar{
     height: 6vh;
+    display: flex;
+    background-color: rgb(241, 241, 241);
+    align-items: center;
+}
+
+.menu-icon{
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.font-family-selector{
+    width: 150px;
+}
+
+.selector{
+    height: 30px;
+    font-size: 18px;
+}
+
+.selector option{
+    font-size: 18px;
 }
 
 .formula-bar{
-    height: 6vh;
+    height: 5vh;
 }
 
 .data-container{
-    height: 74vh;
+    height: 75vh;
 }
 
 .sheet-bar{
