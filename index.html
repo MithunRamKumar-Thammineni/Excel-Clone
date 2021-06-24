@@ -40,6 +40,21 @@
                 <option style="font-family:Palatino" value="Palatino">Palatino</option>
                 <option style="font-family:Verdana" value="Verdana">Verdana</option>
             </select>
+            <select class="selector font-size-selector">
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="22">22</option>
+                <option value="24">24</option>
+                <option value="26">26</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+            </select>
             <div class="material-icons menu-icon icon-bold">format_bold</div>
             <div class="material-icons menu-icon icon-italic">format_italic</div>
             <div class="material-icons menu-icon icon-underline">format_underline</div>
@@ -51,11 +66,21 @@
         </div>
         <div class="formula-bar"></div>
         <div class="data-container">
+            <div class="select-all"></div>
+            <div class="column-name-container"></div>            
             <div class="row-name-container"></div>
-            <div class="column-name-container"></div>
             <div class="input-cell-container"></div>
         </div>
-        <div class="sheet-bar"></div>
+        <div class="sheet-bar">
+            <div class="scroller">
+                <div class="material-icons icon-left-scroll">arrow_left</div>
+                <div class="material-icons icon-right-scroll">arrow_right</div>
+            </div>
+            <div class="material-icons icon-add">add_circle</div>
+           <div class="sheet-tab-container">
+               <div class="sheet-tab">Sheet1</div>
+           </div>
+        </div>
     </div>
 </body>
 
