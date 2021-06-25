@@ -105,6 +105,7 @@ body{
     width: calc(100vw - 30px);
     height: 30px;
     border: 1px solid lightgray;
+    display: flex;
 
 }
 
@@ -168,4 +169,32 @@ body{
 
 .Sheet-tab:hover{
     cursor: default;
+}
+
+.column-name{
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid lightgray;    
+    font-weight: normal;
+}
+
+.row-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    border-bottom: 1px solid lightgray;
+}
+
+.cell-row{
+    display: flex;
+}
+
+.input-cell{
+    width: 100px;
+    height: 25px;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
 }
