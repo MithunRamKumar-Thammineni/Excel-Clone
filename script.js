@@ -1,3 +1,24 @@
+let defaultProperties = {
+    text: "",
+    "font-weight": "",
+    "font-style": "",
+    "text-decoration": "",
+    "text-align": "left",
+    "background-color": "white",
+    "color": "black",
+    "font-family": "Noto Sans",
+    "font-size": 14
+}
+
+let cellData = {
+    "Sheet1": []
+}
+
+let selectedSheet = "Sheet1";
+let totalSheets = 1;
+
+
+
 $(document).ready(function () {
     //runs after entire website is loaded
     let cellContainer = $(".input-cell-conainer");
@@ -19,7 +40,7 @@ $(document).ready(function () {
             }
         }
 
-      
+
         let column = $(`<div class="column-name colId-${i}" id="colCod-${ans}">${ans}</div>`);
         $(".column-name-container").append(column);
         let row = $(`<div class="row-name" id="rowId-${i}">${i}</div>`);
@@ -31,11 +52,40 @@ $(document).ready(function () {
         let row = $(`<div class="cell-row"></div>`)
         for (let j = 1; j <= 100; j++) {
             let colCode = $(`.colId-${j}`).attr("id").split("-")[1];
-            let column = $(`<div class="input-cell" contenteditable="true" id = "row-{i}-col-${j}" data="code-A"></div>`)
+            let column = $(`<div class="input-cell" contenteditable="false" id = "row-{i}-col-${j}" data="code-A"></div>`)
             row.append(column)
         }
         $(".input-cell-container").append(row);
     }
+
+    $(".align-icon").click(function () {
+        $(".align-icon.selected").removeClass("selected");
+        $(this).addClass("selected");
+    });
+
+    $(".style-icon").click(function () {
+        $(this).toggleClass("selected");
+    });
+
+    $(".input-cell").click(function () {
+        $(".input-cell.selected").removeClass("selected");
+        $(this).addClass("selected");
+    })
+
+    $(".input-cell").dblclick(function () {
+        $(".input-cell.selected").removeClass("selected");
+        $(this).addClass("selected");
+        $(this).attr("contenteditable", "true");
+        $(this).focus();
+    });
+
+    $(".input-cell-container").scroll(function () {
+        $(".column-name-container").scrollLeft(this.scrollLeft);
+        $(".row-name-container").scrollTop(this.scrollTop);
+    })
+
+
+
 
 
 

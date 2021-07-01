@@ -126,6 +126,7 @@ body{
     width: calc(100vw - 30px);
     height: calc(75vh - 30px);
     border: 1px solid lightgray;
+    overflow: scroll;
 }
 
 .sheet-bar{
@@ -207,6 +208,10 @@ body{
     outline-color: #107c41;
 }
 
+.input-cell.selected{
+    border: 2px solid #107c41;
+}
+
 
 .formula-editor {
     height: 70%;
@@ -214,8 +219,7 @@ body{
     display: flex;
     align-items: center;
     background-color: #fff;
-    padding-left: 0.7rem;
-    padding-right: 0.7rem;    
+    padding: 0.5rem;
 }
 
 .selected-cell {
@@ -233,3 +237,8 @@ body{
     width: calc(100vw - 160px);
     outline-color: #107c41; 
 }
+
+.menu-icon.selected{
+    background-color: lightgray;
+}
+
