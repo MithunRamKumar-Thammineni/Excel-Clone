@@ -258,3 +258,18 @@ body{
     border-left: none;
 }
 
+.color-picker {
+    position: absolute;
+    width: 26px;
+    height: 12px;
+    border: none;
+    padding: 0;
+    top: 35px;
+    left: 9px;
+    cursor: pointer;
+}
+
+.icon-color-fill, .icon-color-text {
+    position: relative;
+}
+
